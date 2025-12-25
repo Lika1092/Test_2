@@ -24,7 +24,11 @@ input[type="text"] { padding: 8px; font-size: 16px; width: 100%; border-radius: 
 .hint-text { margin-top: 15px; font-style: italic; color: #2c3e50; display: none; }
 .image-question, .image-answer { display: block; width: 100%; max-width: 500px; border-radius: 10px; margin: 10px 0; box-shadow: 0 2px 6px rgba(0,0,0,0.15); }
 
-.nav-btn { display: inline-block; margin-right: 0px; padding: 8px 12px; border-radius: 6px; border: 1px solid #ccc; background-color: #ecf0f1; cursor: pointer; transition: 0.3s; }
+#question-nav {
+    display: flex;
+    overflow-x: auto;          /* горизонтальный скролл */
+  }
+.nav-btn { margin-right: 0px; padding: 8px 12px; border-radius: 6px; border: 1px solid #ccc; background-color: #ecf0f1; cursor: pointer; transition: 0.3s; }
 .nav-btn:hover { background-color: #dfe6e9; }
 .nav-btn.answered { background-color: #2ecc71; color: white; }
 .nav-btn.active { background-color: #3498db; color: white; }
@@ -168,6 +172,7 @@ input[type="text"] { padding: 8px; font-size: 16px; width: 100%; border-radius: 
   margin: 5px;
 }
 }
+
 
 
 
