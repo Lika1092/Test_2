@@ -1832,7 +1832,7 @@
     "id": "q151",
     "type": "text",
     "question": "(Смотреть подсказку)<br> <img src=\"/assets/images/151.PNG\" alt=\"Картинка\" class=\"q-img\">",
-    "hint": "<img src=\"/assets/images/151_1.PNG\" alt=\"Картинка\" class=\"q-img\">",
+    "hint": "<img src=\"Test_2/assets/images/151_1.PNG\" alt=\"Картинка\" class=\"q-img\">",
     "answer": "(2/(3*x^(2/3)))-(9/(x^4))"
   },
   {
@@ -2314,4 +2314,5 @@
     "hint": "Высказывание",
     "answer": "Высказывание"
   }
+
 ]
