@@ -52,7 +52,7 @@ input[type="text"] { padding: 8px; font-size: 16px; width: 100%; border-radius: 
 }
 
 
-@media (max-width: 980px) {
+@media (max-width: 2000px) {
 
   body {
     margin: 0;
@@ -161,3 +161,4 @@ input[type="text"] { padding: 8px; font-size: 16px; width: 100%; border-radius: 
     padding: 8px;
   }
 }
+
