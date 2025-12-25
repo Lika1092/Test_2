@@ -107,7 +107,7 @@ input[type="text"] { padding: 8px; font-size: 16px; width: 100%; border-radius: 
 #result { text-align: center; 
   font-weight: bold; 
   font-size: 20px; 
-  margin-top: 80%; 
+  margin-top: 70%; 
   background: #fff; 
   padding: 15px 25px; 
   border-radius: 12px; 
@@ -168,6 +168,7 @@ input[type="text"] { padding: 8px; font-size: 16px; width: 100%; border-radius: 
   margin: 5px;
 }
 }
+
 
 
 
