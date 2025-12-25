@@ -122,7 +122,7 @@ input[type="text"] { padding: 8px; font-size: 16px; width: 100%; border-radius: 
     font-size: 26px;
     margin-top: 10px;
   }
-  .hint-btn { position: absolute; top: 20px; right: 20px; border: none; background-color: #3498db; color: white; font-weight: bold; width: 70px; height: 70px; border-radius: 50%; cursor: pointer; font-size: 30px; line-height: 0; transition: 0.3s; }
+  .hint-btn { position: absolute; top: 20px; right: 20px; border: none; background-color: #3498db; color: white; font-weight: bold; width: 60px; height: 60px; border-radius: 50%; cursor: pointer; font-size: 30px; line-height: 0; transition: 0.3s; }
 
   /* Картинки в вопросах */
   .q-img {
@@ -161,4 +161,5 @@ input[type="text"] { padding: 8px; font-size: 16px; width: 100%; border-radius: 
     padding: 8px;
   }
 }
+
 
