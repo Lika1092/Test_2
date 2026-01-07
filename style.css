@@ -1,0 +1,195 @@
+body { font-family: Arial, sans-serif; background-color: #f5f6fa; padding: 10px; color: #2c3e50; }
+h1 { text-align: center; margin-bottom: 10px; }
+
+.question { display: none; background: #fff; border-radius: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); padding: 30px; margin: 30px auto; max-width: 700px; animation: fadeIn 0.5s ease; position: relative;}
+.question.active { display: block; }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+.card, .option { display: flex; align-items: center; gap: 10px; padding: 14px; border-radius: 12px; border: 2px solid transparent; background: #ecf0f1; cursor: pointer; transition: all 0.4s ease; font-size: 16px; }
+.card:hover, .option:hover { background: #dfe6e9; }
+.card.correct, .option.correct { background-color: #2ecc71; color: white; transform: scale(1.03); }
+.card.incorrect, .option.incorrect { background-color: #e74c3c; color: white; transform: scale(0.98); }
+.card.disabled, .option.disabled { pointer-events: none; opacity: 0.8; }
+
+input[type="text"] { padding: 8px; font-size: 16px; width: 100%; border-radius: 8px; border: 1px solid #ccc; }
+.check-btn { margin-top: 10px; padding: 8px 12px; font-size: 16px; border-radius: 8px; border: none; background-color: #3498db; color: white; cursor: pointer; }
+.check-btn:hover { background-color: #2980b9; }
+.check-bts { margin-top: 10px; padding: 8px 12px; font-size: 16px; border-radius: 8px; border: none; background-color: #3498db; color: white; cursor: pointer; margin-left: 65em;}
+
+#result { text-align: center; font-weight: bold; font-size: 20px; margin-top: 40px; background: #fff; display: inline-block; padding: 15px 25px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+
+.hint-btn { position: absolute; top: 20px; right: 20px; border: none; background-color: #3498db; color: white; font-weight: bold; width: 36px; height: 36px; border-radius: 50%; cursor: pointer; font-size: 18px; line-height: 0; transition: 0.3s; }
+.hint-btn:hover { background-color: #2980b9; }
+
+.hint-text { margin-top: 15px; font-style: italic; color: #2c3e50; display: none; }
+.image-question, .image-answer { display: block; width: 100%; max-width: 500px; border-radius: 10px; margin: 10px 0; box-shadow: 0 2px 6px rgba(0,0,0,0.15); }
+
+#question-nav {
+    display: flex;
+    overflow-x: auto;          /* горизонтальный скролл */
+  }
+.nav-btn { margin-right: 0px; padding: 8px 12px; border-radius: 6px; border: 1px solid #ccc; background-color: #ecf0f1; cursor: pointer; transition: 0.3s; }
+.nav-btn:hover { background-color: #dfe6e9; }
+.nav-btn.answered { background-color: #2ecc71; color: white; }
+.nav-btn.active { background-color: #3498db; color: white; }
+
+.match-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.match-row span {
+  width: 150px;
+}
+
+.match-row input {
+  width: 50px;
+  margin-right: 10px;
+}
+.text-input {
+  width: 500px;           /* одинаковая ширина */
+  padding: 5px;          /* внутренние отступы */
+  text-align: center;     /* текст по центру */
+  border: 1px solid #ccc; /* рамка */
+  border-radius: 4px;    /* скругление углов */
+  font-size: 16px;
+}
+
+
+@media (max-width: 1080px) {
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+  }
+
+  /* Контейнер с вопросом */
+  .question {
+    width: 100%;
+    min-height: 40vh;          /* почти весь экран */
+    padding: 20px;
+    box-sizing: content-box;
+    border-radius: 0;          /* без "карточки вдалеке" */
+  }
+  .question.active { margin: 40px; max-width: 840px; padding: 20px;}
+
+  /* Заголовок вопроса */
+  .question h3 {
+    font-size: 30px;
+    line-height: 1.4;
+    margin-bottom: 15px;
+  }
+
+
+
+  /* Варианты ответов */
+  .option {
+    font-size: 28px;
+    padding: 12px;
+    margin-bottom: 10px;
+  }
+
+  /* Текстовое поле (text, match, math) */
+  input[type="text"],
+  .text-input {
+    margin-top: 50px;
+    font-size: 30px;
+    padding: 12px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Кнопка "Проверить" */
+  .check-btn {
+    font-size: 30px;
+    padding: 14px;
+    width: 100%;
+    margin-top: 50%;
+  }
+  .check-bts{
+    font-size: 30px;
+    padding: 14px;
+    width: 100%;
+    margin-top: 5%;
+  }
+  /* Результат */
+#result { text-align: center; 
+  font-weight: bold; 
+  font-size: 20px; 
+  margin-top: 50%; 
+  background: #fff; 
+  padding: 15px 25px; 
+  border-radius: 12px; 
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 30%; 
+  margin-right: 30%; 
+}
+  
+  /* Подсказка */
+  .hint-text {
+    font-size: 26px;
+    margin-top: 10px;
+  }
+  .hint-btn { position: absolute; top: 20px; right: 20px; border: none; background-color: #3498db; color: white; font-weight: bold; width: 60px; height: 60px; border-radius: 50%; cursor: pointer; font-size: 30px; line-height: 0; transition: 0.3s; }
+
+  /* Картинки в вопросах */
+  .q-img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+  }
+
+  /* ============================
+     Верхнее меню с номерами
+     ============================ */
+  #question-nav {
+    display: flex;
+    overflow-x: auto;          /* горизонтальный скролл */
+    gap: 10px;
+    padding: 12px;
+    margin-bottom: 10px;
+  }
+
+  .nav-btn {
+    min-width: 55px;
+    height: 55px;
+    font-size: 25px;
+    border-radius: 14px;
+  }
+
+  /* Активный вопрос */
+  .nav-btn.active {
+    font-weight: bold;
+    transform: scale(1.1);
+  }
+
+  /* Таблица для match */
+  .match-table td {
+    font-size: 30px;
+    padding-right: 12px;
+
+  }
+  .match-table input {
+  width: 500px;
+  margin: 5px;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
