@@ -81,6 +81,7 @@ input[type="text"] { padding: 8px; font-size: 16px; width: 100%; border-radius: 
     font-size: 30px;
     line-height: 1.4;
     margin-bottom: 15px;
+    margin-top: 50px;
   }
 
 
@@ -180,6 +181,7 @@ input[type="text"] { padding: 8px; font-size: 16px; width: 100%; border-radius: 
   margin: 5px;
 }
 }
+
 
 
 
