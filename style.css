@@ -114,7 +114,7 @@ input[type="text"] { padding: 8px; font-size: 16px; width: 100%; border-radius: 
 font-size: 30px;
     padding: 14px;
     width: 100%;
-    margin-top: 50%;
+    margin-top: 5%;
     margin-left: 0px;
   }
   /* Результат */
@@ -182,6 +182,7 @@ font-size: 30px;
   margin: 5px;
 }
 }
+
 
 
 
