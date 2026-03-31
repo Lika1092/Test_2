@@ -43,7 +43,7 @@
     "id": "q4",
     "type": "radio",
     "question": "Полный путь к файлу: c:\\books\\raskaz.txt. Назовите имя файла:",
-    "hint": "2",
+    "hint": "2, т.к. c:\books является подкаталогом, в котором размещается файл",
     "options": [
       "1) books\\raskaz",
       "2) raskaz.txt",
